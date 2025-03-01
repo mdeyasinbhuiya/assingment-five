@@ -69,8 +69,14 @@
             DOM?
           </div>
           <div class="collapse-content mt-3">
-            Click the "Sign Up" button in the top right corner and follow the
-            registration process.
+            There are many ways to select an element in the DOM.
+            <ol>
+              <li>getElementById(): Select element by its id</li>
+              <li>getElementsByClassName(): Select element by class name</li>
+              <li>getElementsByTagName(): Select element by tag name</li>
+              <li>querySelector():Selects the first matching elements</li>
+              <li>querySelectorAll():Select all matching element</li>
+            </ol>
           </div>
         </div>
         <div
@@ -84,8 +90,10 @@
             textContent ?
           </div>
           <div class="collapse-content mt-3">
-            Click the "Sign Up" button in the top right corner and follow the
-            registration process.
+            innerHTML mainly use for add or modify html using java script.
+            innerText use for add text or change text or using for return.
+            textContent use like innerText but its more powerful than innerText.
+            This three use in js DOM.
           </div>
         </div>
         <div
@@ -98,8 +106,8 @@
             Question-3: What is event delegation in the DOM?
           </div>
           <div class="collapse-content mt-3">
-            Click the "Sign Up" button in the top right corner and follow the
-            registration process.
+            Event delegation is a technic where we set event listener in parent
+            element and event handle their child element.
           </div>
         </div>
         <div
@@ -112,8 +120,9 @@
             Question-4: What is event bubbling in the DOM?
           </div>
           <div class="collapse-content mt-3">
-            Click the "Sign Up" button in the top right corner and follow the
-            registration process.
+            Event bubbling is a js mechanism. If you click on child element, the
+            element will go up to its parent,then grandparent and finally to the
+            document
           </div>
         </div>
         <div
@@ -127,17 +136,22 @@
             JavaScript?
           </div>
           <div class="collapse-content mt-3">
-            Click the "Sign Up" button in the top right corner and follow the
-            registration process.
+            For create an element with js we can use
+            document.createElement().and then we want to add this element we can
+            use appendChild() or append(), and lastly if we want to remove a
+            element we can use removeChild() or remove().
           </div>
         </div>
       </main>
     </section>
 
     <script>
-      document.getElementById("back").addEventListener("click", function () {
-        window.location.href = "./index.html";
-      });
+      document
+        .getElementById("back")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "./index.html";
+        });
     </script>
   </body>
 </html>
