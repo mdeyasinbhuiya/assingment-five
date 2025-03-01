@@ -41,11 +41,11 @@
       }
     </style>
   </head>
-  <body class="bg-commonBg">
+  <body class="bg-commonBg pt-5">
     <section class="w-11/12 mx-auto">
       <header>
         <nav
-          class="flex justify-between items-center px-6 rounded-xl border-black border-2 py-5 my-5 bg-white"
+          class="flex justify-between items-center px-6 rounded-xl py-5 mb-5 bg-white"
         >
           <div class="flex items-center gap-3">
             <img src="./assets/logo.png" alt="" class="h-12 w-12" />
@@ -56,7 +56,7 @@
               class="flex items-center gap-2 bg-commonBg p-3 rounded-full"
             >
               <img src="./assets/checkbox.png" alt="" class="w-7 h-7" />
-              <p class="text-2xl font-bold" id="nav-count">22</p>
+              <p class="text-2xl font-bold" id="nav-count">23</p>
             </button>
             <button class="bg-[#F4F7FF] rounded-full">
               <img
@@ -77,36 +77,38 @@
             class="flex justify-between gap-6 border-dashed border-b-2 border-blue-200 p-7"
           >
             <!-- !task assigned -->
-            <div class="flex items-center gap-3 bg-commonBg p-7 rounded-xl">
-              <div class="rounded-3xl bg-white p-4">
+            <div
+              class="flex items-center gap-3 bg-commonBg px-4 py-3 rounded-xl"
+            >
+              <div class="rounded-full bg-white p-4">
                 <img src="./assets/checkbox.png" alt="" class="w-7 h-7" />
               </div>
               <p>
                 Task Assigned <br /><span
                   id="task-count"
-                  class="text-3xl font-bold"
+                  class="text-2xl font-bold"
                   >06</span
                 >
               </p>
             </div>
             <!-- !new today -->
-            <a href=""
-              ><div
-                class="flex gap-8 rounded-xl py-6 pr-20 pl-10 bg-gradient-to-r from-blue-700 to-blue-300 text-white"
-              >
-                <img src="./assets/board.png" alt="" class="h-16" />
-                <p class="text-2xl">Discover Something <br />New Today!</p>
-              </div></a
+
+            <div
+              id="blog-link"
+              class="flex cursor-pointer gap-8 rounded-xl py-6 pr-16 pl-8 bg-gradient-to-r from-blue-700 to-blue-300 text-white"
             >
+              <img src="./assets/board.png" alt="" class="h-16" />
+              <p class="text-2xl">Discover Something <br />New Today!</p>
+            </div>
+
             <!-- ! date -->
-            <div class="flex gap-4 bg-commonBg p-7 rounded-xl">
+            <div
+              class="flex gap-4 bg-commonBg px-6 py-4 rounded-xl items-center"
+            >
               <div class="rounded-full bg-white p-4">
                 <img src="./assets/calender.png" alt="" class="w-7 h-7" />
               </div>
-              <p id="date" class="font-bold">
-                Wed <br />
-                Jul 28 2025
-              </p>
+              <p id="datePara" class="font-bold"></p>
             </div>
           </div>
           <!-- card container -->
@@ -117,11 +119,11 @@
                 <p class="py-2 px-6 bg-white max-w-max rounded-lg mb-4">
                   ShopEase
                 </p>
-                <h2 class="font-semibold text-2xl mb-4">
+                <h2 class="font-semibold text-lg mb-4">
                   Fix Mobile Button Issue
                 </h2>
-                <p class="p-4 bg-white rounded-lg text-[#00000050] mb-4">
-                  Debug using Chrome DevTools, check for overlapping elements...
+                <p class="px-4 py-2 bg-white rounded-lg text-[#00000050] mb-4">
+                  Debug using Chrome DevTools, check for ...
                 </p>
                 <div
                   class="flex gap-2 justify-end items-center py-3 border-dashed border-t-2 border-blue-200"
@@ -130,7 +132,12 @@
                     Deadline <br />
                     <span class="font-semibold">21 March 2025</span>
                   </p>
-                  <button class="btn btn-primary">Completed</button>
+                  <button
+                    id="shopease-btn"
+                    class="bg-[#3752FD] px-2 py-2 rounded-lg text-white font-medium hover:bg-blue-700 disabled:text-gray-400 disabled:bg-gray-200"
+                  >
+                    Completed
+                  </button>
                 </div>
               </div>
             </div>
@@ -138,22 +145,25 @@
             <div class="card bg-commonBg">
               <div class="card-body pb-2">
                 <p class="py-2 px-6 bg-white max-w-max rounded-lg mb-4">
-                  ShopEase
+                  CloudSync
                 </p>
-                <h2 class="font-semibold text-2xl mb-4">
-                  Fix Mobile Button Issue
-                </h2>
-                <p class="p-4 bg-white rounded-lg text-[#00000050] mb-4">
-                  Debug using Chrome DevTools, check for overlapping elements...
+                <h2 class="font-semibold text-lg mb-4">Add Dark Mode</h2>
+                <p class="px-4 py-2 bg-white rounded-lg text-[#00000050] mb-4">
+                  Debug using Chrome DevTools, check for ...
                 </p>
                 <div
-                  class="card-actions justify-end py-3 border-dashed border-t-2 border-blue-200"
+                  class="flex gap-2 justify-end items-center py-3 border-dashed border-t-2 border-blue-200"
                 >
                   <p>
                     Deadline <br />
                     <span class="font-semibold">21 March 2025</span>
                   </p>
-                  <button class="btn btn-primary">Completed</button>
+                  <button
+                    id="cloudsync-btn"
+                    class="bg-[#3752FD] px-2 py-2 rounded-lg text-white font-medium hover:bg-blue-700 disabled:text-gray-400 disabled:bg-gray-200"
+                  >
+                    Completed
+                  </button>
                 </div>
               </div>
             </div>
@@ -161,45 +171,49 @@
             <div class="card bg-commonBg">
               <div class="card-body pb-2">
                 <p class="py-2 px-6 bg-white max-w-max rounded-lg mb-4">
-                  ShopEase
+                  SwiftPay
                 </p>
-                <h2 class="font-semibold text-2xl mb-4">
-                  Fix Mobile Button Issue
-                </h2>
-                <p class="p-4 bg-white rounded-lg text-[#00000050] mb-4">
-                  Debug using Chrome DevTools, check for overlapping elements...
+                <h2 class="font-semibold text-lg mb-4">Optimize Home page </h2>
+                <p class="px-4 py-2 bg-white rounded-lg text-[#00000050] mb-4">
+                  Debug using Chrome DevTools, check for ...
                 </p>
                 <div
-                  class="card-actions justify-end py-3 border-dashed border-t-2 border-blue-200"
+                  class="flex gap-2 justify-end items-center py-3 border-dashed border-t-2 border-blue-200"
                 >
                   <p>
                     Deadline <br />
                     <span class="font-semibold">21 March 2025</span>
                   </p>
-                  <button class="btn btn-primary">Completed</button>
+                  <button
+                    id="swiftpay-btn"
+                    class="bg-[#3752FD] px-2 py-2 rounded-lg text-white font-medium hover:bg-blue-700 disabled:text-gray-400 disabled:bg-gray-200"
+                  >
+                    Completed
+                  </button>
                 </div>
               </div>
             </div>
             <!-- card 4 -->
             <div class="card bg-commonBg">
               <div class="card-body pb-2">
-                <p class="py-2 px-6 bg-white max-w-max rounded-lg mb-4">
-                  ShopEase
-                </p>
-                <h2 class="font-semibold text-2xl mb-4">
-                  Fix Mobile Button Issue
-                </h2>
-                <p class="p-4 bg-white rounded-lg text-[#00000050] mb-4">
-                  Debug using Chrome DevTools, check for overlapping elements...
+                <p class="py-2 px-6 bg-white max-w-max rounded-lg mb-4">Meta</p>
+                <h2 class="font-semibold text-lg mb-4">Add new emoji 🤲</h2>
+                <p class="px-4 py-2 bg-white rounded-lg text-[#00000050] mb-4">
+                  Debug using Chrome DevTools, check for ...
                 </p>
                 <div
-                  class="card-actions justify-end py-3 border-dashed border-t-2 border-blue-200"
+                  class="flex gap-2 justify-end items-center py-3 border-dashed border-t-2 border-blue-200"
                 >
                   <p>
                     Deadline <br />
                     <span class="font-semibold">21 March 2025</span>
                   </p>
-                  <button class="btn btn-primary">Completed</button>
+                  <button
+                    id="meta-btn"
+                    class="bg-[#3752FD] px-2 py-2 rounded-lg text-white font-medium hover:bg-blue-700 disabled:text-gray-400 disabled:bg-gray-200"
+                  >
+                    Completed
+                  </button>
                 </div>
               </div>
             </div>
@@ -207,22 +221,25 @@
             <div class="card bg-commonBg">
               <div class="card-body pb-2">
                 <p class="py-2 px-6 bg-white max-w-max rounded-lg mb-4">
-                  ShopEase
+                  Google LLC
                 </p>
-                <h2 class="font-semibold text-2xl mb-4">
-                  Fix Mobile Button Issue
-                </h2>
-                <p class="p-4 bg-white rounded-lg text-[#00000050] mb-4">
-                  Debug using Chrome DevTools, check for overlapping elements...
+                <h2 class="font-semibold text-lg mb-4">Integrate OpenAI API</h2>
+                <p class="px-4 py-2 bg-white rounded-lg text-[#00000050] mb-4">
+                  Debug using Chrome DevTools, check for ...
                 </p>
                 <div
-                  class="card-actions justify-end py-3 border-dashed border-t-2 border-blue-200"
+                  class="flex gap-2 justify-end items-center py-3 border-dashed border-t-2 border-blue-200"
                 >
                   <p>
                     Deadline <br />
                     <span class="font-semibold">21 March 2025</span>
                   </p>
-                  <button class="btn btn-primary">Completed</button>
+                  <button
+                    id="google-llc-btn"
+                    class="bg-[#3752FD] px-2 py-2 rounded-lg text-white font-medium hover:bg-blue-700 disabled:text-gray-400 disabled:bg-gray-200"
+                  >
+                    Completed
+                  </button>
                 </div>
               </div>
             </div>
@@ -230,40 +247,52 @@
             <div class="card bg-commonBg">
               <div class="card-body pb-2">
                 <p class="py-2 px-6 bg-white max-w-max rounded-lg mb-4">
-                  ShopEase
+                  Glassdoar
                 </p>
-                <h2 class="font-semibold text-2xl mb-4">
-                  Fix Mobile Button Issue
+                <h2 class="font-semibold text-lg mb-4">
+                  Improve Job searching
                 </h2>
-                <p class="p-4 bg-white rounded-lg text-[#00000050] mb-4">
-                  Debug using Chrome DevTools, check for overlapping elements...
+                <p class="px-4 py-2 bg-white rounded-lg text-[#00000050] mb-4">
+                  Debug using Chrome DevTools, check for ...
                 </p>
                 <div
-                  class="card-actions justify-end py-3 border-dashed border-t-2 border-blue-200"
+                  class="flex gap-2 justify-end items-center py-3 border-dashed border-t-2 border-blue-200"
                 >
                   <p>
                     Deadline <br />
                     <span class="font-semibold">21 March 2025</span>
                   </p>
-                  <button class="btn btn-primary">Completed</button>
+                  <button
+                    id="glassdoar-btn"
+                    class="bg-[#3752FD] px-2 py-2 rounded-lg text-white font-medium hover:bg-blue-700 disabled:bg-gray-200 disabled:text-gray-400"
+                  >
+                    Completed
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <!-- section activity log -->
-        <section class="text-center bg-white rounded-2xl pt-6">
+        <section
+          class="text-center bg-white rounded-2xl pt-6 px-3"
+          id="activity"
+        >
           <div class="border-dashed border-b-2 border-blue-100 pb-4">
             <div class="flex gap-4 justify-center mb-4">
               <img src="./assets/activity.png" alt="" />
               <h1 class="font-500 text-xl font-semibold">Activity Log</h1>
             </div>
-            <button class="btn btn-primary font-500">Clear History</button>
+            <button class="btn btn-primary font-500" id="history-clear">
+              Clear History
+            </button>
           </div>
+          <div class="" id="history-page"></div>
         </section>
       </main>
       <footer></footer>
     </section>
     <script src="./script/file.js"></script>
+    <script src="./script/commonfile.js"></script>
   </body>
 </html>

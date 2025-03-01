@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs page</title>
+    <!-- ! daisyui and tailwind added -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              commonBg: "#F4F7FF",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- ! google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #00303c;
+      }
+    </style>
+  </head>
+  <body class="bg-commonBg pt-5">
+    <section class="w-11/12 mx-auto">
+      <header>
+        <nav class="bg-white">
+          <div class="navbar shadow-lg p-4 rounded-2xl">
+            <div class="navbar-start gap-2">
+              <img src="./assets/logo.png" class="w-8" alt="" />
+              <a class="text-2xl">Dev<span class="font-bold">Board</span></a>
+            </div>
+            <div class="navbar-end">
+              <a class="btn btn-primary text-white" id="back">Back to Desk</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h1 class="text-center font-bold text-2xl mt-4 pb-8">Blogs</h1>
+        <div
+          tabindex="0"
+          class="collapse collapse-open bg-white rounded-sm mb-5"
+        >
+          <div
+            class="collapse-title text-xl font-bold border-dashed border-b-2 border-gray-200"
+          >
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </div>
+          <div class="collapse-content mt-3">
+            Click the "Sign Up" button in the top right corner and follow the
+            registration process.
+          </div>
+        </div>
+        <div
+          tabindex="0"
+          class="collapse collapse-open bg-white rounded-sm mb-5"
+        >
+          <div
+            class="collapse-title text-xl font-bold border-dashed border-b-2 border-gray-200"
+          >
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </div>
+          <div class="collapse-content mt-3">
+            Click the "Sign Up" button in the top right corner and follow the
+            registration process.
+          </div>
+        </div>
+        <div
+          tabindex="0"
+          class="collapse collapse-open bg-white rounded-sm mb-5"
+        >
+          <div
+            class="collapse-title text-xl font-bold border-dashed border-b-2 border-gray-200"
+          >
+            Question-3: What is event delegation in the DOM?
+          </div>
+          <div class="collapse-content mt-3">
+            Click the "Sign Up" button in the top right corner and follow the
+            registration process.
+          </div>
+        </div>
+        <div
+          tabindex="0"
+          class="collapse collapse-open bg-white rounded-sm mb-5"
+        >
+          <div
+            class="collapse-title text-xl font-bold border-dashed border-b-2 border-gray-200"
+          >
+            Question-4: What is event bubbling in the DOM?
+          </div>
+          <div class="collapse-content mt-3">
+            Click the "Sign Up" button in the top right corner and follow the
+            registration process.
+          </div>
+        </div>
+        <div
+          tabindex="0"
+          class="collapse collapse-open bg-white rounded-sm mb-5"
+        >
+          <div
+            class="collapse-title text-xl font-bold border-dashed border-b-2 border-gray-200"
+          >
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </div>
+          <div class="collapse-content mt-3">
+            Click the "Sign Up" button in the top right corner and follow the
+            registration process.
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <script>
+      document.getElementById("back").addEventListener("click", function () {
+        window.location.href = "./index.html";
+      });
+    </script>
+  </body>
+</html>
